@@ -9,8 +9,10 @@ import io.ktor.server.request.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import io.ktor.utils.io.*
+import kotlinx.coroutines.delay
 import web.http.Request
 import web.http.Response
+import kotlin.time.Duration.Companion.seconds
 
 @JsModule("node:os")
 external val os: dynamic
@@ -55,6 +57,10 @@ val server = embeddedServer(CFWorker) {
             call.respondBytesWriter {
                 writeByteArray("Streaming response...".encodeToByteArray())
             }
+        }
+        get("/delayed") {
+            delay(5.seconds)
+            call.respondText("This response was delayed by 5 seconds.")
         }
     }
 }
