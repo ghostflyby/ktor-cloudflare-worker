@@ -234,8 +234,7 @@ internal class CFResponse(call: CFWorkerCall, private val response: CompletableD
         val stream = channel.toReadableStream(scope)
         val deferred = CompletableDeferred<Unit>()
         waitUntil(deferred.asPromise())
-        val body = BodyInit(stream)
-        val response = Response(body, responseInit())
+        val response = Response(stream, responseInit())
         this.response.complete(response)
         return channel
     }
