@@ -25,7 +25,7 @@ kotlin {
         val commonMain by getting {
             dependencies {
 //                implementation("io.ktor:ktor-http:3.3.0")
-                implementation("io.ktor:ktor-server-core-js:3.4.1")
+                implementation("io.ktor:ktor-server-core-js:3.4.2")
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
                 implementation(kotlinWrappers.web)
             }
