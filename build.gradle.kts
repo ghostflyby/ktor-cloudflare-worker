@@ -2,8 +2,8 @@ import org.jetbrains.kotlin.gradle.targets.web.nodejs.BaseNodeJsEnvSpec
 import org.jetbrains.kotlin.gradle.targets.web.yarn.BaseYarnRootEnvSpec
 
 plugins {
-    kotlin("multiplatform") version "2.3.21"
-    kotlin("plugin.js-plain-objects") version "2.3.21"
+    kotlin("multiplatform") version "2.4.0"
+    kotlin("plugin.js-plain-objects") version "2.4.0"
 }
 
 group = "dev.ghostflyby"
@@ -25,8 +25,8 @@ kotlin {
         val commonMain by getting {
             dependencies {
 //                implementation("io.ktor:ktor-http:3.3.0")
-                implementation("io.ktor:ktor-server-core-js:3.4.3")
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
+                implementation("io.ktor:ktor-server-core-js:3.5.0")
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.11.0")
                 implementation(kotlinWrappers.web)
             }
         }
