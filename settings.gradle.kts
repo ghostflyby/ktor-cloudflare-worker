@@ -11,7 +11,7 @@ dependencyResolutionManagement {
 
     versionCatalogs {
         create("kotlinWrappers") {
-            from("org.jetbrains.kotlin-wrappers:kotlin-wrappers-catalog:2026.6.3")
+            from("org.jetbrains.kotlin-wrappers:kotlin-wrappers-catalog:2026.7.7")
         }
     }
 }
